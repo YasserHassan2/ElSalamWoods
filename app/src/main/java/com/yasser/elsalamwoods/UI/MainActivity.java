@@ -1,4 +1,4 @@
-package com.yasser.elsalamwoods;
+package com.yasser.elsalamwoods.UI;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,8 +7,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.yasser.elsalamwoods.R;
+
 public class MainActivity extends AppCompatActivity {
     Button btn_mwoz3,btn_3amel;
+    public static int mwaze3or3amel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
         btn_mwoz3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mwaze3or3amel = 0;
                 Intent intent = new Intent(MainActivity.this,LoginActivity.class);
                 startActivity(intent);
             }
@@ -28,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         btn_3amel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mwaze3or3amel = 1;
                 Intent intent = new Intent(MainActivity.this,CategotiesActivity.class);
                 startActivity(intent);
             }

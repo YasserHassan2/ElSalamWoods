@@ -1,8 +1,10 @@
-package com.yasser.elsalamwoods;
+package com.yasser.elsalamwoods.UI;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.yasser.elsalamwoods.R;
 
 public class LoginActivity extends AppCompatActivity {
 

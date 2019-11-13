@@ -1,12 +1,27 @@
-package com.yasser.elsalamwoods;
+package com.yasser.elsalamwoods.Model;
 
 public class Category {
-    String catName;
+
+    String id,catName;
     int catImg;
 
     public Category(String catName, int catImg) {
         this.catName = catName;
         this.catImg = catImg;
+    }
+
+    public Category(String id, String catName, int catImg) {
+        this.id = id;
+        this.catName = catName;
+        this.catImg = catImg;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getCatName() {

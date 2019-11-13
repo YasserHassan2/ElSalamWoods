@@ -1,4 +1,4 @@
-package com.yasser.elsalamwoods;
+package com.yasser.elsalamwoods.Adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -11,6 +11,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
+import com.yasser.elsalamwoods.Model.Category;
+import com.yasser.elsalamwoods.R;
 
 import java.util.ArrayList;
 

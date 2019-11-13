@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.yasser.elsalamwoods">
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
 
     <application
         android:allowBackup="true"
@@ -9,9 +10,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".CategotiesActivity"></activity>
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".UI.ProductsActivity"></activity>
+        <activity android:name=".UI.CategotiesActivity" />
+        <activity android:name=".UI.LoginActivity" />
+        <activity android:name=".UI.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,6 +24,15 @@
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
+        <meta-data
+            android:name="com.parse.SERVER_URL"
+            android:value="https://parseapi.back4app.com" />
+        <meta-data
+            android:name="com.parse.APPLICATION_ID"
+            android:value="Ay04kZlMdPUIqG1cApGChhMDKUS96lAd01qQHpoG" />
+        <meta-data
+            android:name="com.parse.CLIENT_KEY"
+            android:value="PLvSQGa0GHOtroT8FAbEbaCYwHs7psxyu0TJp7Eh" />
     </application>
 
 </manifest>

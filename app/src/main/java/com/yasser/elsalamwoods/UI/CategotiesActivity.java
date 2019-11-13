@@ -1,13 +1,18 @@
-package com.yasser.elsalamwoods;
+package com.yasser.elsalamwoods.UI;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.icu.util.ULocale;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
+
+import com.yasser.elsalamwoods.Adapter.CustomItemClickListener;
+import com.yasser.elsalamwoods.Adapter.RecyclerViewAdapter;
+import com.yasser.elsalamwoods.Model.Category;
+import com.yasser.elsalamwoods.R;
 
 import java.util.ArrayList;
 
@@ -35,7 +40,9 @@ public class CategotiesActivity extends AppCompatActivity {
         adapter.setOnItemClickListener(new CustomItemClickListener() {
             @Override
             public void onItemClick(View view, int position) {
-                Toast.makeText(CategotiesActivity.this, categories.get(position).getCatName(), Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(CategotiesActivity.this,ProductsActivity.class);
+                intent.putExtra("catId",categories.get(position).getId());
+                startActivity(intent);
             }
         });
 
@@ -43,12 +50,12 @@ public class CategotiesActivity extends AppCompatActivity {
     }
 
     private void addingCategpries() {
-        Category cat1 = new Category("ابــــواب مصفــــــحة", R.drawable.doorone);
-        Category cat2 = new Category("ابــــواب زانــــــــ", R.drawable.doortwo);
-        Category cat3 = new Category("ابــــواب اروبـــــــى", R.drawable.doorthree);
-        Category cat4 = new Category("ابــــواب أرو", R.drawable.doorfour);
-        Category cat5 = new Category("ابــــواب سويـــــــدى", R.drawable.doorfive);
-        Category cat6 = new Category("ابــــواب خشــب موسكــى", R.drawable.doorsfin);
+        Category cat1 = new Category("1","ابــــواب مصفــــــحة", R.drawable.doorone);
+        Category cat2 = new Category("2","ابــــواب زانــــــــ", R.drawable.doortwo);
+        Category cat3 = new Category("3","ابــــواب اروبـــــــى", R.drawable.doorthree);
+        Category cat4 = new Category("4","ابــــواب أرو", R.drawable.doorfour);
+        Category cat5 = new Category("5","ابــــواب سويـــــــدى", R.drawable.doorfive);
+        Category cat6 = new Category("6","ابــــواب خشــب موسكــى", R.drawable.doorsfin);
 
         categories.add(cat1);
         categories.add(cat2);
