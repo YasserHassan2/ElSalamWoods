@@ -36,4 +36,7 @@ dependencies {
     //parse
     implementation 'com.parse:parse-android:1.15.8'
 
+
+    implementation 'com.github.mejdi14:Flat-Dialog-Android:1.0.4'
+
 }

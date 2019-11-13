@@ -97,8 +97,7 @@ public class ProductsActivity extends AppCompatActivity {
                         adapter.setOnItemClickListener(new CustomItemClickListener() {
                             @Override
                             public void onItemClick(View view, int position) {
-                                //TODO update views intger in database
-
+                            sendToDetailsWithObjectMwz3(products.get(position));
 
                             }
                         });
@@ -152,9 +151,7 @@ public class ProductsActivity extends AppCompatActivity {
                         adapter.setOnItemClickListener(new CustomItemClickListener() {
                             @Override
                             public void onItemClick(View view, int position) {
-                                //TODO update views intger in database
-                                Toast.makeText(ProductsActivity.this, products.get(position).getPrName(), Toast.LENGTH_SHORT).show();
-
+                              sendToDetailsWithObjectM3amel(products.get(position));
                             }
                         });
 
@@ -164,6 +161,38 @@ public class ProductsActivity extends AppCompatActivity {
                 }
             });
         }
+    }
+    public void sendToDetailsWithObjectMwz3(Product product){
+        String imageURL = product.getPrImageURL();
+        String name = product.getPrName();
+        String desc = product.getPrDescri();
+        String type = product.getPrType();
+        String price = product.getPrPriceMwoza3();
+
+        Intent intent = new Intent(ProductsActivity.this,DetailsActivity.class);
+        intent.putExtra("name",name);
+        intent.putExtra("imageURL",imageURL);
+        intent.putExtra("desc",desc);
+        intent.putExtra("type",type);
+        intent.putExtra("price",price);
+        startActivity(intent);
+
+    }
+    public void sendToDetailsWithObjectM3amel(Product product){
+        String imageURL = product.getPrImageURL();
+        String name = product.getPrName();
+        String desc = product.getPrDescri();
+        String type = product.getPrType();
+        String price = product.getPrPrice3amel();
+
+        Intent intent = new Intent(ProductsActivity.this,DetailsActivity.class);
+        intent.putExtra("name",name);
+        intent.putExtra("imageURL",imageURL);
+        intent.putExtra("desc",desc);
+        intent.putExtra("type",type);
+        intent.putExtra("price",price);
+        startActivity(intent);
+
     }
 }
 
