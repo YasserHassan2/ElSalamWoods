@@ -50,12 +50,12 @@ public class CategotiesActivity extends AppCompatActivity {
     }
 
     private void addingCategpries() {
-        Category cat1 = new Category("1","ابــــواب مصفــــــحة", R.drawable.doorone);
-        Category cat2 = new Category("2","ابــــواب زانــــــــ", R.drawable.doortwo);
-        Category cat3 = new Category("3","ابــــواب اروبـــــــى", R.drawable.doorthree);
-        Category cat4 = new Category("4","ابــــواب أرو", R.drawable.doorfour);
-        Category cat5 = new Category("5","ابــــواب سويـــــــدى", R.drawable.doorfive);
-        Category cat6 = new Category("6","ابــــواب خشــب موسكــى", R.drawable.doorsfin);
+        Category cat1 = new Category("1","ابــــواب مصفــــــحة", R.color.colorPrimary);
+        Category cat2 = new Category("2","ابــــواب زانــــــــ", R.color.colorPrimary);
+        Category cat3 = new Category("3","ابــــواب اروبـــــــى", R.color.colorPrimary);
+        Category cat4 = new Category("4","ابــــواب أرو", R.color.colorPrimary);
+        Category cat5 = new Category("5","ابــــواب سويـــــــدى", R.color.colorPrimary);
+        Category cat6 = new Category("6","ابــــواب خشــب موسكــى", R.color.colorPrimary);
 
         categories.add(cat1);
         categories.add(cat2);

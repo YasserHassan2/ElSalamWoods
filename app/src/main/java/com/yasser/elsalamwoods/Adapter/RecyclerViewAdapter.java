@@ -53,7 +53,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     public void onBindViewHolder(ViewHolder holder, final int position) {
 
         RequestOptions requestOptions = new RequestOptions();
-        requestOptions.placeholder(R.drawable.doorfour);
+        requestOptions.placeholder(R.color.colorPrimaryDark);
         requestOptions.fitCenter();
 
 
