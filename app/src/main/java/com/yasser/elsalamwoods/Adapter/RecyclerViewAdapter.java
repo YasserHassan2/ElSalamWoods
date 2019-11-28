@@ -34,7 +34,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.cat_row, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.grid_cat_row, parent, false);
         final ViewHolder holder = new ViewHolder(view);
         view.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -84,8 +84,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
         public ViewHolder(View itemView) {
             super(itemView);
-            image = itemView.findViewById(R.id.imageView2);
-            tv_depName = itemView.findViewById(R.id.tv_catText);
+            image = itemView.findViewById(R.id.iv_catImage);
+            tv_depName = itemView.findViewById(R.id.info_text);
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

@@ -5,12 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".UI.CategotiesActivity">
+
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/imageViesw2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
-        android:src="@drawable/oldgold"></ImageView>
+        android:src="@color/black_overlay"></ImageView>
 
 
 
@@ -18,7 +19,23 @@
         layout="@layout/toolbar"
         android:id="@+id/toolbar"
         ></include>
-
+    <com.denzcoskun.imageslider.ImageSlider
+        android:id="@+id/image_slider"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="8dp"
+        app:auto_cycle="true"
+        app:corner_radius="20"
+        app:delay="0"
+        app:placeholder="@drawable/logohere"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:period="3000" />
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/catRecyclerView"
         android:layout_width="match_parent"
@@ -29,7 +46,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constrainedHeight="false"
-        tools:listitem="@layout/cat_row"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+        tools:listitem="@layout/grid_cat_row"
+        app:layout_constraintTop_toBottomOf="@+id/image_slider" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

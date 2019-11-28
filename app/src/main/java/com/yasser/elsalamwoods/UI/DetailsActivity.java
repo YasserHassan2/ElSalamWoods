@@ -17,6 +17,7 @@ import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.example.flatdialoglibrary.dialog.FlatDialog;
+import com.yasser.elsalamwoods.BuildConfig;
 import com.yasser.elsalamwoods.R;
 
 public class DetailsActivity extends AppCompatActivity {
@@ -56,6 +57,7 @@ public class DetailsActivity extends AppCompatActivity {
                         .setSubtitle("يمكن التواصل معنا عن طريق زيارة موقعنا او الاتصال على رقم خدمة العملاء")
                         .setFirstButtonText("زيارة موقعـــــنا")
                         .setSecondButtonText("اتصال على خدمة العملاء")
+                        .setThirdButtonText("مشاركة المنتج")
                         .withFirstButtonListner(new View.OnClickListener() {
                             @RequiresApi(api = Build.VERSION_CODES.M)
                             @Override
@@ -75,6 +77,24 @@ public class DetailsActivity extends AppCompatActivity {
                                 Intent intent = new Intent(Intent.ACTION_DIAL);
                                 intent.setData(Uri.parse("tel:" + "123123212"));
                                 startActivity(intent);
+                            }
+                        })
+                        .withThirdButtonListner(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                try {
+                                    Intent shareIntent = new Intent(Intent.ACTION_SEND);
+                                    shareIntent.setType("text/plain");
+                                    shareIntent.putExtra(Intent.EXTRA_SUBJECT, "تطبيق السلام للاخشاب");
+                                    String shareMessage = "\nللحصول على افضل العروض و متابعة افضل انواع الابواب حمل دلوقتى تطبيق من على المتجر\n\n";
+                                    shareMessage = shareMessage + "https://play.google.com/store/apps/details?id=" +
+                                            BuildConfig.APPLICATION_ID +
+                                            "\n\n";
+                                    shareIntent.putExtra(Intent.EXTRA_TEXT, shareMessage);
+                                    startActivity(Intent.createChooser(shareIntent, "choose one"));
+                                } catch (Exception e) {
+                                    Toast.makeText(DetailsActivity.this, e.toString(), Toast.LENGTH_SHORT).show();
+                                }
                             }
                         }).isCancelable(true)
                         .show();

@@ -63,6 +63,8 @@ public class ProductMowaz3RecyclerViewAdapter extends RecyclerView.Adapter<Produ
 
         holder.tv_prName.setText(products.get(position).getPrName());
 
+        holder.tv_prDesc.setText("كود المنتج"+products.get(position).getPrType());
+
         holder.tv_prPrice.setText(products.get(position).getPrPriceMwoza3()+" EGP");
 
     }
@@ -81,7 +83,7 @@ public class ProductMowaz3RecyclerViewAdapter extends RecyclerView.Adapter<Produ
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         ImageView image;
-        TextView tv_prName,tv_prPrice;
+        TextView tv_prName,tv_prPrice,tv_prDesc;
         public int position = 0;
 
         public ViewHolder(View itemView) {
@@ -89,6 +91,7 @@ public class ProductMowaz3RecyclerViewAdapter extends RecyclerView.Adapter<Produ
             image = itemView.findViewById(R.id.imageView3);
             tv_prName = itemView.findViewById(R.id.tv_prName);
             tv_prPrice = itemView.findViewById(R.id.textView2);
+            tv_prDesc = itemView.findViewById(R.id.tv_desc);
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
